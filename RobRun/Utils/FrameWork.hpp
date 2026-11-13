@@ -1,0 +1,45 @@
+#pragma once
+
+// Windows Libraries
+#include <Windows.h>
+#include <iostream>
+#include <dwmapi.h>
+#include <TlHelp32.h>
+
+// Security
+#include "Security/XorStr.hpp"
+#include "Security/LazyImporter.hpp"
+
+// Math
+#include "Math/Matrix4x4.hpp"
+#include "Math/Vectors/Vector2D.hpp"
+#include "Math/Vectors/Vector3D.hpp"
+#include "Math/Vectors/Vector4D.hpp"
+
+// Utilities
+#include "Utilities/Misc.hpp"
+#include "Utilities/Memory.hpp"
+
+// Render
+#include "Render/Overlay.hpp"
+#include "Render/Interface.hpp"
+
+// ImGui
+#include "Dependencies/ImGui/imgui.h"
+#include "Dependencies/ImGui/imgui_impl_dx11.h"
+#include "Dependencies/ImGui/imgui_impl_win32.h"
+#include "Dependencies/ImGui/imgui_internal.h"
+
+
+// Json
+#include "Dependencies/NlohmannJson.hpp"
+
+// DirectX Inlcude
+#include <d3d11.h>
+#include <d3dx11.h>
+#include <d3d9.h>
+#include <d3dx9.h>
+#pragma comment(lib, "d3d9.lib")
+#pragma comment(lib, "d3dx9.lib")
+
+#define SafeCall(str) lzimpLI_FN(str)

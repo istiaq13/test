@@ -1,0 +1,216 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Debug|x64">
+      <Configuration>Debug</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|x64">
+      <Configuration>Release</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <VCProjectVersion>17.0</VCProjectVersion>
+    <Keyword>Win32Proj</Keyword>
+    <ProjectGuid>{A1B2C3D4-E5F6-7890-ABCD-EF1234567890}</ProjectGuid>
+    <RootNamespace>RobRun</RootNamespace>
+    <WindowsTargetPlatformVersion>10.0.22621.0</WindowsTargetPlatformVersion>
+    <ProjectName>RobRun</ProjectName>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v143</PlatformToolset>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v143</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v143</PlatformToolset>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v143</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="Shared">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <TargetName>RobRun</TargetName>
+    <OutDir>O:\Code\Web Projects\Territory\ls\toolRR\x64\Release\</OutDir>
+    <IntDir>$(ProjectDir)x64\Release\</IntDir>
+    <LinkIncremental>false</LinkIncremental>
+    <GenerateManifest>true</GenerateManifest>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <TargetName>RobRun</TargetName>
+    <OutDir>O:\Code\Web Projects\Territory\ls\toolRR\x64\Debug\</OutDir>
+    <IntDir>$(ProjectDir)x64\Debug\</IntDir>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <SDLCheck>true</SDLCheck>
+      <PreprocessorDefinitions>_DEBUG;_WINDOWS;_CRT_SECURE_NO_WARNINGS;IMGUI_DEFINE_MATH_OPERATORS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ConformanceMode>true</ConformanceMode>
+      <LanguageStandard>stdcpplatest</LanguageStandard>
+      <MultiProcessorCompilation>true</MultiProcessorCompilation>
+      <AdditionalIncludeDirectories>$(ProjectDir);$(ProjectDir)Utils\Dependencies\DirectX\Include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <AdditionalDependencies>dwmapi.lib;d3d11.lib;d3dx11.lib;ntdll.lib;winhttp.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <UACExecutionLevel>RequireAdministrator</UACExecutionLevel>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <SDLCheck>true</SDLCheck>
+      <PreprocessorDefinitions>NDEBUG;_WINDOWS;_CRT_SECURE_NO_WARNINGS;IMGUI_DEFINE_MATH_OPERATORS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ConformanceMode>true</ConformanceMode>
+      <LanguageStandard>stdcpp20</LanguageStandard>
+      <MultiProcessorCompilation>true</MultiProcessorCompilation>
+      <DisableSpecificWarnings>4005;%(DisableSpecificWarnings)</DisableSpecificWarnings>
+      <AdditionalIncludeDirectories>$(ProjectDir);$(ProjectDir)Utils\Dependencies\DirectX\Include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+      <GenerateDebugInformation>false</GenerateDebugInformation>
+      <AdditionalLibraryDirectories>$(ProjectDir)Utils\Dependencies\DirectX\Lib;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalDependencies>atls.lib;dwmapi.lib;d3dx11.lib;d3d11.lib;ntdll.lib;winhttp.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <UACExecutionLevel>RequireAdministrator</UACExecutionLevel>
+      <LinkTimeCodeGeneration>UseFastLinkTimeCodeGeneration</LinkTimeCodeGeneration>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <!-- Core -->
+    <ClCompile Include="entryPoint.cpp" />
+    <ClCompile Include="Main\Cheat.cpp" />
+    <ClCompile Include="Main\Options.cpp" />
+    <!-- GameSDK -->
+    <ClCompile Include="Main\GameSDK\RobRun.cpp" />
+    <!-- Features -->
+    <ClCompile Include="Main\Features\esp.cpp" />
+    <!-- Auth -->
+    <ClCompile Include="Main\Auth\HWID.cpp" />
+    <ClCompile Include="Main\Auth\AuthClient.cpp" />
+    <ClCompile Include="Main\Auth\AuthWindow.cpp" />
+    <ClCompile Include="Main\Auth\VoiceRecorder.cpp" />
+    <ClCompile Include="Main\Auth\RealtimeClient.cpp" />
+    <!-- ImGui core -->
+    <ClCompile Include="Utils\Dependencies\ImGui\imgui.cpp" />
+    <ClCompile Include="Utils\Dependencies\ImGui\imgui_draw.cpp" />
+    <ClCompile Include="Utils\Dependencies\ImGui\imgui_impl_dx11.cpp" />
+    <ClCompile Include="Utils\Dependencies\ImGui\imgui_impl_dx9.cpp" />
+    <ClCompile Include="Utils\Dependencies\ImGui\imgui_impl_win32.cpp" />
+    <ClCompile Include="Utils\Dependencies\ImGui\imgui_tables.cpp" />
+    <ClCompile Include="Utils\Dependencies\ImGui\imgui_widgets.cpp" />
+    <!-- ImGui framework -->
+    <ClCompile Include="Utils\Dependencies\ImGui\framework\gui.cpp" />
+    <ClCompile Include="Utils\Dependencies\ImGui\framework\helpers\fonts.cpp" />
+    <ClCompile Include="Utils\Dependencies\ImGui\framework\helpers\config.cpp" />
+    <ClCompile Include="Utils\Dependencies\ImGui\framework\helpers\draw.cpp" />
+    <ClCompile Include="Utils\Dependencies\ImGui\framework\widgets\helpers.cpp" />
+    <ClCompile Include="Utils\Dependencies\ImGui\framework\widgets\window.cpp" />
+    <ClCompile Include="Utils\Dependencies\ImGui\framework\widgets\button.cpp" />
+    <ClCompile Include="Utils\Dependencies\ImGui\framework\widgets\checkbox.cpp" />
+    <ClCompile Include="Utils\Dependencies\ImGui\framework\widgets\child.cpp" />
+    <ClCompile Include="Utils\Dependencies\ImGui\framework\widgets\coloredit.cpp" />
+    <ClCompile Include="Utils\Dependencies\ImGui\framework\widgets\config_list.cpp" />
+    <ClCompile Include="Utils\Dependencies\ImGui\framework\widgets\dropdown.cpp" />
+    <ClCompile Include="Utils\Dependencies\ImGui\framework\widgets\keybind.cpp" />
+    <ClCompile Include="Utils\Dependencies\ImGui\framework\widgets\notify.cpp" />
+    <ClCompile Include="Utils\Dependencies\ImGui\framework\widgets\range.cpp" />
+    <ClCompile Include="Utils\Dependencies\ImGui\framework\widgets\section.cpp" />
+    <ClCompile Include="Utils\Dependencies\ImGui\framework\widgets\slider.cpp" />
+    <ClCompile Include="Utils\Dependencies\ImGui\framework\widgets\text_field.cpp" />
+    <ClCompile Include="Utils\Dependencies\ImGui\framework\data\fonts_data.cpp" />
+    <!-- Render / Utils -->
+    <ClCompile Include="Utils\Render\Interface.cpp" />
+    <ClCompile Include="Utils\Render\Overlay.cpp" />
+    <ClCompile Include="Utils\Utilities\Memory.cpp" />
+    <ClCompile Include="Utils\Utilities\Misc.cpp" />
+    <ClCompile Include="Utils\Notifs.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <!-- Headers -->
+    <ClInclude Include="entryPoint.hpp" />
+    <ClInclude Include="Main\Cheat.hpp" />
+    <ClInclude Include="Main\Options.hpp" />
+    <ClInclude Include="Main\GameSDK\Offsets.hpp" />
+    <ClInclude Include="Main\GameSDK\Classes.hpp" />
+    <ClInclude Include="Main\GameSDK\RobRun.hpp" />
+    <ClInclude Include="Main\Features\esp.hpp" />
+    <ClInclude Include="Main\Auth\HWID.hpp" />
+    <ClInclude Include="Main\Auth\AuthClient.hpp" />
+    <ClInclude Include="Main\Auth\AuthWindow.hpp" />
+    <ClInclude Include="Main\Auth\VoiceRecorder.hpp" />
+    <ClInclude Include="Main\Auth\RealtimeClient.hpp" />
+    <ClInclude Include="Main\xorstring.h" />
+    <ClInclude Include="Utils\FrameWork.hpp" />
+    <ClInclude Include="Utils\Notifs.hpp" />
+    <ClInclude Include="Utils\Math\Matrix4x4.hpp" />
+    <ClInclude Include="Utils\Math\Vectors\Vector2D.hpp" />
+    <ClInclude Include="Utils\Math\Vectors\Vector3D.hpp" />
+    <ClInclude Include="Utils\Math\Vectors\Vector4D.hpp" />
+    <ClInclude Include="Utils\Render\Interface.hpp" />
+    <ClInclude Include="Utils\Render\kaanlar.h" />
+    <ClInclude Include="Utils\Render\Overlay.hpp" />
+    <ClInclude Include="Utils\Security\LazyImporter.hpp" />
+    <ClInclude Include="Utils\Security\XorStr.hpp" />
+    <ClInclude Include="Utils\Utilities\Memory.hpp" />
+    <ClInclude Include="Utils\Utilities\Syscall.hpp" />
+    <ClInclude Include="Utils\Utilities\Misc.hpp" />
+    <ClInclude Include="Utils\NlohmannJson.hpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="resource.rc" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>
+
+

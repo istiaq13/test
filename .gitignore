@@ -1,0 +1,70 @@
+# ==========================================
+# Visual Studio / MSBuild Build Directories
+# ==========================================
+[Xx]64/
+[Xx]86/
+[Ww][Ii][Nn]32/
+[Aa][Rr][Mm]/
+[Aa][Rr][Mm]64/
+[Dd]ebug/
+[Rr]elease/
+[Bb]in/
+[Oo]bj/
+build/
+
+# ==========================================
+# Visual Studio User & Cache Files
+# ==========================================
+.vs/
+*.user
+*.userosv
+*.suo
+*.userprefs
+*.sln.docstates
+
+# ==========================================
+# Intermediate & Build Artifacts
+# ==========================================
+*.obj
+*.o
+*.tlog
+*.log
+*.ilk
+*.pdb
+*.idb
+*.iobj
+*.ipdb
+*.recipe
+*.lastbuildstate
+*.res
+*.pch
+*.exp
+*.exe
+*.dll
+
+# Libraries (ignore build outputs, keep prebuilt vendor dependencies)
+*.lib
+!**/Dependencies/**/*.lib
+
+# ==========================================
+# Backup, Temp, and Editor Files
+# ==========================================
+*.bak
+*.tmp
+*.temp
+*~
+*.swp
+*.swo
+
+# VS Code / JetBrains IDEs
+.vscode/
+.idea/
+
+# OS Specific
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+[Dd]esktop.ini
+$RECYCLE.BIN/
+.DS_Store
+
